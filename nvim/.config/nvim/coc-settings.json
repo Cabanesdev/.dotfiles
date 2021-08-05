@@ -1,0 +1,20 @@
+{
+	"coc.preferences.formatOnType": true,
+	"coc.preferences.formatOnSaveFiletypes": [
+		"html",
+		"css",
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact",
+		"json"
+	],
+	"prettier.useTabs": true,
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": true,
+	"emmet.showAbbreviationSuggestions": true,
+	"emmet.includeLanguages": {
+		"vue-html": "html",
+		"javascript": "javascriptreact"
+	}
+}
