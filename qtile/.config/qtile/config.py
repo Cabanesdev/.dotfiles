@@ -84,7 +84,6 @@ keys = [
     Key([mod], "s", lazy.spawn("scrot")),
     Key([mod, "shift"], "s", lazy.spawn("scrot -s")),
     
-    # File manager
     # ------------ Hardware Config ------------
 
     # Volume
@@ -169,8 +168,8 @@ screens = [
                     padding=20,
                 ),       
                 widget.Systray(),
-                widget.Net(
-                    interface='wlo1',
+                widget.CPU(
+                    format='CPU: {load_percent}%',
                     padding=10
                 ),
                 widget.CurrentLayout(
