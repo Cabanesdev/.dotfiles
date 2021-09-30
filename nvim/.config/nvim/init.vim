@@ -127,7 +127,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 nnoremap ff :lua require('telescope.builtin').find_files()<CR>
 nnoremap fb :lua require('telescope.builtin').buffers()<CR>
-command! -nargs=0 Fg :Telescope live_grep
+nnoremap fg :lua require('telescope.builtin').live_grep()<CR>
 command! -nargs=0 Fh :Telescope help_tags
 command! -nargs=0 FB :Telescope file_browser
 
