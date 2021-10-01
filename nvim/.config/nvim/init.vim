@@ -72,8 +72,8 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme nord
-" let g:lightline = { 'colorscheme': 'bluewery' }
+colorscheme gruvbox 
+let g:gruvbox_termcolors=16
 
 " ===============================================================NERDTREE========================================================================
 
