@@ -9,6 +9,8 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
 Plug 'gruvbox-community/gruvbox' 
 Plug 'arcticicestudio/nord-vim'
+Plug 'relastle/bluewery.vim'
+
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -70,7 +72,8 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+colorscheme gruvbox 
+let g:gruvbox_termcolors=16
 
 " ===============================================================NERDTREE========================================================================
 
