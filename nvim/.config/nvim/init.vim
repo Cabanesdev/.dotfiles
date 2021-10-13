@@ -1,4 +1,4 @@
-" ===============================================================================================================================================
+"===============================================================================================================================================
 "                                                            PLUGINS INSTALLATION
 " ===============================================================================================================================================
 
@@ -10,6 +10,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'gruvbox-community/gruvbox' 
 Plug 'arcticicestudio/nord-vim'
 Plug 'relastle/bluewery.vim'
+Plug 'bluz71/vim-moonfly-colors'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 
 " Airline
@@ -18,10 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " System explorer (nerdtree)
 Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-
-" Icons
-Plug 'ryanoasis/vim-devicons'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " coc for tslinting, auto complete and prettier
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -44,6 +43,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+" Plug 'ThePrimeagen/harpoon'
+
 
 " Visualmulti
 Plug 'mg979/vim-visual-multi'
@@ -72,32 +73,32 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox 
+colorscheme moonfly 
 let g:gruvbox_termcolors=16
 
 " ===============================================================NERDTREE========================================================================
 
-map <F2> :call NERDTreeToggleAndRefresh()<CR>
+ map <space>e :CocCommand explorer<CR>
 
-function NERDTreeToggleAndRefresh()
-  :NERDTreeToggle
-  if g:NERDTree.IsOpen()
-    :NERDTreeRefreshRoot
-  endif
-endfunction
+" function NERDTreeToggleAndRefresh()
+"   :NERDTreeToggle
+"   if g:NERDTree.IsOpen()
+"     :NERDTreeRefreshRoot
+"   endif
+" endfunction
 
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
+" let g:NERDTreeGitStatusIndicatorMapCustom = {
+"                 \ 'Modified'  :'✹',
+"                 \ 'Staged'    :'✚',
+"                 \ 'Untracked' :'✭',
+"                 \ 'Renamed'   :'➜',
+"                 \ 'Unmerged'  :'═',
+"                 \ 'Deleted'   :'✖',
+"                 \ 'Dirty'     :'✗',
+"                 \ 'Ignored'   :'☒',
+"                 \ 'Clean'     :'✔︎',
+"                 \ 'Unknown'   :'?',
+"                 \ }
 
 " ===============================================================DEVICONS========================================================================
 
@@ -106,7 +107,6 @@ set encoding=UTF-8
 " ===============================================================AIRLINE=========================================================================
 
 let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#enabled = 1 
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline_theme='gruvbox'
@@ -135,6 +135,15 @@ nnoremap fb :lua require('telescope.builtin').buffers()<CR>
 nnoremap fg :lua require('telescope.builtin').live_grep()<CR>
 command! -nargs=0 Fh :Telescope help_tags
 command! -nargs=0 FB :Telescope file_browser
+
+" ===============================================================HARPOON=========================================================================
+
+nnoremap gh :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap ga :lua require("harpoon.mark").add_file()<CR>
+nnoremap <M-h> :lua require("harpoon.ui").nav_file(1)<CR>
+nnoremap <M-t> :lua require("harpoon.ui").nav_file(2)<CR>
+nnoremap <M-n> :lua require("harpoon.ui").nav_file(3)<CR>
+nnoremap <M-s> :lua require("harpoon.ui").nav_file(4)<CR>
 
 " ===============================================================TAGALONG========================================================================
 
@@ -168,6 +177,7 @@ set scrolloff=8
 set copyindent
 set preserveindent
 set signcolumn=yes
+set guifont=DejaVu\ Sans\ Mono:h13
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 let mapleader = "-"

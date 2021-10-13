@@ -16,5 +16,24 @@
 	"emmet.includeLanguages": {
 		"vue-html": "html",
 		"javascript": "javascriptreact"
+	},
+
+	// Coc-explorer
+	"explorer.openAction.for.directory": "expandOrCollapse",
+	"explorer.git.icon.status.added": "✚",
+	"explorer.git.icon.status.deleted": "✖",
+	"explorer.git.icon.status.renamed": "➜",
+	"explorer.git.icon.status.unmerged": "≠",
+	"explorer.git.icon.status.untracked": "?",
+	"explorer.git.icon.status.modified": "✹",
+	"explorer.git.icon.status.ignored": "☒",
+	"explorer.git.icon.status.mixed": "*",
+	"explorer.quitOnOpen": true,
+	"explorer.file.showHiddenFiles": false,
+	"explorer.file.column.clip.copy": "",
+	"explorer.file.column.clip.cut": "",
+	"explorer.width": 25,
+	"explorer.file.hiddenRules": {
+		"patternMatches": ["^\\.git$", "^\\node_modules$", "^\\plugged$"]
 	}
 }
