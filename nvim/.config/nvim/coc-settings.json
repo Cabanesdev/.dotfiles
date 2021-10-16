@@ -7,6 +7,7 @@
 		"typescript",
 		"javascriptreact",
 		"typescriptreact",
+		"java",
 		"json"
 	],
 	"prettier.useTabs": true,
@@ -35,5 +36,13 @@
 	"explorer.width": 25,
 	"explorer.file.hiddenRules": {
 		"patternMatches": ["^\\.git$", "^\\node_modules$", "^\\plugged$"]
+	},
+	"explorer.keyMappings.global": {
+		"a": "addFile",
+		"A": "addDirectory",
+		"r": "rename",
+		"f": "search",
+		"F": "searchRecursive",
+		   "df": "delete"
 	}
 }
