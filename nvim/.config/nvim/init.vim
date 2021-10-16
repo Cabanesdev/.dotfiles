@@ -161,7 +161,6 @@ set termguicolors
 set scrolloff=8
 set copyindent
 set preserveindent
-set clipboard=unnamedplus
 set signcolumn=yes
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
@@ -175,3 +174,5 @@ inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j <esc>:m .+1<CR>==
 nnoremap <leader>k <esc>:m .-2<CR>==
 
+nnoremap <leader>+ :vertical resize +5<cr>
+nnoremap <leader>- :vertical resize -5<cr>
