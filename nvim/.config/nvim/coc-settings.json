@@ -43,6 +43,9 @@
 		"r": "rename",
 		"f": "search",
 		"F": "searchRecursive",
-		   "df": "delete"
+		"df": "delete",
+		"yy": "copyFile",
+		"dd": "cutFile",
+		"p": "pasteFile"
 	}
 }

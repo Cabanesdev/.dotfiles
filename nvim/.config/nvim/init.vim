@@ -1,4 +1,4 @@
-"===============================================================================================================================================
+"	===============================================================================================================================================
 "                                                            PLUGINS INSTALLATION
 " ===============================================================================================================================================
 
@@ -122,12 +122,12 @@ command! -nargs=0 FB :Telescope file_browser
 
 " ===============================================================HARPOON=========================================================================
 
-nnoremap gh :lua require("harpoon.ui").toggle_quick_menu()<CR>
-nnoremap ga :lua require("harpoon.mark").add_file()<CR>
+nnoremap <space>h :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap <space>a :lua require("harpoon.mark").add_file()<CR>
 nnoremap <M-h> :lua require("harpoon.ui").nav_file(1)<CR>
-nnoremap <M-t> :lua require("harpoon.ui").nav_file(2)<CR>
-nnoremap <M-n> :lua require("harpoon.ui").nav_file(3)<CR>
-nnoremap <M-s> :lua require("harpoon.ui").nav_file(4)<CR>
+nnoremap <M-j> :lua require("harpoon.ui").nav_file(2)<CR>
+nnoremap <M-k> :lua require("harpoon.ui").nav_file(3)<CR>
+nnoremap <M-l> :lua require("harpoon.ui").nav_file(4)<CR>
 
 " ===============================================================TAGALONG========================================================================
 
@@ -136,6 +136,7 @@ let g:tagalong_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 
 " ===============================================================TREESITTER======================================================================
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true} }
+
 " ===============================================================GENERAL CONFIGURATIONS==========================================================
 syntax enable
 syntax on
@@ -164,7 +165,7 @@ set clipboard=unnamedplus
 set signcolumn=yes
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
-let mapleader = "-"
+let mapleader = " "
 " ===============================================================KEYMAPS=======================================================================
 inoremap <silent><expr> <c-space> coc#refresh()
 vnoremap J :m '>+1<CR>gv=gv
@@ -173,3 +174,4 @@ inoremap <C-j> <esc>:m .+1<CR>==
 inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j <esc>:m .+1<CR>==
 nnoremap <leader>k <esc>:m .-2<CR>==
+
