@@ -58,15 +58,8 @@ Plug 'AndrewRadev/tagalong.vim'
 " Line comenter
 Plug 'tpope/vim-commentary'
 
-" FZF
-Plug 'junegunn/fzf'
-
 " GO 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-" Debugger
-Plug 'mfussenegger/nvim-jdtls'
- Plug 'mfussenegger/nvim-dap'
 
 call plug#end()
 
