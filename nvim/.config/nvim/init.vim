@@ -155,6 +155,7 @@ set scrolloff=8
 set copyindent
 set preserveindent
 set signcolumn=yes
+set clipboard=unnamedplus
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 let mapleader = " "
