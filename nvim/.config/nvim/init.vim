@@ -12,6 +12,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'relastle/bluewery.vim'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'olimorris/onedarkpro.nvim'
 
 
 " " Airline
@@ -70,7 +71,7 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox 
+colorscheme onedark 
 let g:gruvbox_termcolors=16
 
 " ===============================================================EXPLORER========================================================================
