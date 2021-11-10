@@ -38,7 +38,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
 
 " Git integration plugin
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " File searcher
 Plug 'nvim-lua/popup.nvim'
