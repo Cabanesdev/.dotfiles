@@ -1,18 +1,18 @@
 {
 	"coc.preferences.formatOnType": true,
-	"coc.preferences.formatOnSaveFiletypes": [
-		"html",
-		"css",
-		"javascript",
-		"typescript",
-		"javascriptreact",
-		"typescriptreact",
-		"java",
-		"json"
-	],
+	"coc.preferences.formatOnSaveFiletypes": ["*"],
+	"coc.preferences.colorSupport": true,
+
+	// Prettier
+	"prettier.formatterPriority": 1,
 	"prettier.useTabs": true,
+	"prettier.tabWidth": 4,
+	"prettier.semi": true,
 	"prettier.singleQuote": true,
+	"prettier.jsxBracketSameLine": false,
 	"prettier.jsxSingleQuote": true,
+
+	// Emmet
 	"emmet.showAbbreviationSuggestions": true,
 	"emmet.includeLanguages": {
 		"vue-html": "html",
