@@ -79,8 +79,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting tmux)
 ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_AUTOCONNECT:=false
-ZSH_TMUX_AUTOQUIT:=$ZSH_TMUX_AUTOSTART
+ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
