@@ -19,6 +19,8 @@
 		"javascript": "javascriptreact"
 	},
 
+	"angular.experimental-ivy": true,
+
 	// Coc-explorer
 	"explorer.openAction.for.directory": "expandOrCollapse",
 	"explorer.git.icon.status.added": "✚",

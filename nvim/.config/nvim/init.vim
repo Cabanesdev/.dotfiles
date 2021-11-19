@@ -27,7 +27,7 @@ Plug 'olimorris/onedarkpro.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " coc extensions
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier','coc-java','coc-explorer']
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-angular', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier','coc-java','coc-explorer']
 
 " Jsx highlight
 Plug 'yuezk/vim-js'
