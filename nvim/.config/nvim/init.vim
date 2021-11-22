@@ -27,7 +27,7 @@ Plug 'olimorris/onedarkpro.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " coc extensions
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-angular', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier','coc-java','coc-explorer']
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-prettier','coc-angular', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-java','coc-explorer']
 
 " Jsx highlight
 Plug 'yuezk/vim-js'
@@ -58,6 +58,9 @@ Plug 'AndrewRadev/tagalong.vim'
 
 " Line comenter
 Plug 'tpope/vim-commentary'
+
+"Prettier
+Plug 'sbdchd/neoformat'
 
 " GO 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -140,10 +143,12 @@ set relativenumber
 set nohlsearch
 set hidden
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
 set noexpandtab
-set smartindent
+set copyindent
+set preserveindent
+set softtabstop=0
+set shiftwidth=4
+set tabstop=4
 set incsearch
 set smartcase
 set noswapfile

@@ -3,14 +3,15 @@
 	"coc.preferences.formatOnSaveFiletypes": ["*"],
 	"coc.preferences.colorSupport": true,
 
-	// Prettier
-	"prettier.formatterPriority": 1,
+	//prettier
+	"prettier.printWidth": 80,
+	"prettier.tabWidth": 2,
 	"prettier.useTabs": true,
-	"prettier.tabWidth": 4,
 	"prettier.semi": true,
 	"prettier.singleQuote": true,
-	"prettier.jsxBracketSameLine": false,
 	"prettier.jsxSingleQuote": true,
+	"prettier.bracketSpacing": true,
+	"prettier.arrowParens": "always",
 
 	// Emmet
 	"emmet.showAbbreviationSuggestions": true,
