@@ -147,8 +147,8 @@ set noexpandtab
 set copyindent
 set preserveindent
 set softtabstop=0
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set incsearch
 set smartcase
 set noswapfile
@@ -160,11 +160,11 @@ set termguicolors
 set scrolloff=8
 set copyindent
 set preserveindent
-set signcolumn=yes
 set clipboard=unnamedplus
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 let mapleader = " "
+set signcolumn=yes
 " ===============================================================KEYMAPS=======================================================================
 inoremap <silent><expr> <c-space> coc#refresh()
 vnoremap J :m '>+1<CR>gv=gv
