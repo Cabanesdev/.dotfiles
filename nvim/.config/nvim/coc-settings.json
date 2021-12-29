@@ -1,7 +1,6 @@
 {
 	"coc.preferences.formatOnType": true,
 	"coc.preferences.formatOnSaveFiletypes": ["*"],
-	"coc.preferences.colorSupport": true,
 
 	//prettier
 	"prettier.printWidth": 80,
@@ -20,8 +19,6 @@
 		"javascript": "javascriptreact"
 	},
 
-	"angular.experimental-ivy": true,
-
 	// Coc-explorer
 	"explorer.openAction.for.directory": "expandOrCollapse",
 	"explorer.git.icon.status.added": "✚",
@@ -35,6 +32,7 @@
 	"explorer.quitOnOpen": true,
 	"explorer.file.showHiddenFiles": false,
 	"explorer.file.column.clip.copy": "",
+	"explorer.icon.enableNerdfont": true,
 	"explorer.file.column.clip.cut": "",
 	"explorer.width": 25,
 	"explorer.file.hiddenRules": {
@@ -50,5 +48,6 @@
 		"yy": "copyFile",
 		"dd": "cutFile",
 		"p": "pasteFile"
-	}
+	},
+	"explorer.filename.colored.enable": true
 }

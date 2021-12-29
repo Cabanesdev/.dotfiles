@@ -78,13 +78,8 @@ keys = [
     Key([mod, "shift"], "m", lazy.spawn("rofi -show")),
 
     # Browser
-    Key([mod], "b", lazy.spawn("firefox")),
+    Key([mod], "b", lazy.spawn("firefox-developer-edition")),
 
-    # Screenshot
-    Key([mod], "s", lazy.spawn("scrot")),
-    Key([mod, "shift"], "s", lazy.spawn("scrot -s")),
-
-    # File manager
     # ------------ Hardware Config ------------
 
     # Volume
@@ -103,7 +98,7 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
 ]
 
-groups = [Group(i) for i in [" "," "," "," "," "]]
+groups = [Group(i) for i in [" "," "," "," "," "," ","ﭮ"]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
@@ -123,7 +118,7 @@ layouts = [
     layout.Max(),
     layout.MonadTall(**layout_conf),
     layout.MonadWide(**layout_conf),
-    # layout.Bsp(**layout_conf),
+    # layout.Bsp(**laout_conf),
     # layout.RatioTile(**layout_conf),
     # layout.Columns(),
     # layout.Tile(),

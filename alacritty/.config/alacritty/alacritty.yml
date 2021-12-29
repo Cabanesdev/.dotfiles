@@ -1,0 +1,100 @@
+background_opacity: 0.95
+
+schemes:
+  ### Nord ###
+  Nord: &Nord # Default colors
+    primary:
+      background: '#2E3440'
+      foreground: '#D8DEE9'
+
+    # Normal colors
+    normal:
+      black: '#3B4252'
+      red: '#BF616A'
+      green: '#A3BE8C'
+      yellow: '#EBCB8B'
+      blue: '#81A1C1'
+      magenta: '#B48EAD'
+      cyan: '#88C0D0'
+      white: '#E5E9F0'
+
+    # Bright colors
+    bright:
+      black: '#4C566A'
+      red: '#BF616A'
+      green: '#A3BE8C'
+      yellow: '#EBCB8B'
+      blue: '#81A1C1'
+      magenta: '#B48EAD'
+      cyan: '#8FBCBB'
+      white: '#ECEFF4'
+
+  bloodMoon: &BloodMoon
+    primary:
+      background: '0x10100E'
+      foreground: '0xC6C6C4'
+
+    # Normal colors
+    normal:
+      black: '0x10100E'
+      red: '0xC40233'
+      green: '0x009F6B'
+      yellow: '0xFFD700'
+      blue: '0x0087BD'
+      magenta: '0x9A4EAE'
+      cyan: '0x20B2AA'
+      white: '0xC6C6C4'
+
+    # Bright colors
+    bright:
+      black: '0x696969'
+      red: '0xFF2400'
+      green: '0x03C03C'
+      yellow: '0xFDFF00'
+      blue: '0x007FFF'
+      magenta: '0xFF1493'
+      cyan: '0x00CCCC'
+      white: '0xFFFAFA'
+
+colors: *BloodMoon
+
+font:
+  bold:
+    family: UbuntuMono Nerd Font
+    # family: mononoki Nerd Font
+    # family: agave Nerd Font
+    # family: Caskaydia Cove Nerd Font
+    # family: JetBrains Mono ExtraBold Nerd Font
+    # family: Hurmit Nerd Font Mono
+    # family: DaddyTimeMono Nerd Font
+    # family: Iosevka NF
+    # family: Hack NF
+    # family: SpaceMono NF
+  italic:
+    family: UbuntuMono Nerd Font
+    # family: mononoki Nerd Font
+    # family: agave Nerd Font
+    # family: Caskaydia Cove Nerd Font
+    # family: JetBrains Mono Medium Nerd Font
+    # family: Hurmit Nerd Font Mono
+    # family: DaddyTimeMono Nerd Font
+    # family: Iosevka NF
+    # family: Hack NF
+    # family: SpaceMono NF
+  normal:
+    family: UbuntuMono Nerd Font
+    # family: mononoki Nerd Font
+    # family: agave Nerd Font
+    # family: Caskaydia Cove Nerd Font
+    # family: JetBrains Mono Medium Nerd Font
+    # family: Hurmit Nerd Font Mono
+    # family: DaddyTimeMono Nerd Font
+    # family: Iosevka NF
+    # family: Hack NF
+    # family: SpaceMono NF
+    style: Regular
+  size: 14
+
+window:
+  padding:
+    x: 2

@@ -14,6 +14,8 @@ Plug 'bluz71/vim-moonfly-colors'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'olimorris/onedarkpro.nvim'
 
+" Devicons
+Plug 'ryanoasis/vim-devicons'
 
 " " Airline
 " Plug 'vim-airline/vim-airline'
@@ -74,7 +76,7 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+colorscheme moonfly
 let g:gruvbox_termcolors=16
 
 " ===============================================================EXPLORER========================================================================
