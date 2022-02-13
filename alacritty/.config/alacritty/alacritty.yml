@@ -1,5 +1,3 @@
-background_opacity: 0.95
-
 schemes:
   ### Nord ###
   Nord: &Nord # Default colors
@@ -96,5 +94,6 @@ font:
   size: 14
 
 window:
+  opacity: 0.9
   padding:
     x: 2

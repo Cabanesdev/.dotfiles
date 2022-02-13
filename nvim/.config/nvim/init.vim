@@ -18,7 +18,7 @@ Plug 'olimorris/onedarkpro.nvim'
 Plug 'ryanoasis/vim-devicons'
 
 " " Airline
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 
 " System explorer (nerdtree)
@@ -76,8 +76,9 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme moonfly
+colorscheme gruvbox 
 let g:gruvbox_termcolors=16
+
 
 " ===============================================================EXPLORER========================================================================
 
@@ -168,7 +169,12 @@ hi! NonText ctermbg=NONE guibg=NONE
 let mapleader = " "
 set signcolumn=yes
 " ===============================================================KEYMAPS=======================================================================
+nmap <leader>gs :G<CR>
+
+" refresh coc
 inoremap <silent><expr> <c-space> coc#refresh()
+
+" move lines
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 inoremap <C-j> <esc>:m .+1<CR>==
@@ -176,5 +182,6 @@ inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j <esc>:m .+1<CR>==
 nnoremap <leader>k <esc>:m .-2<CR>==
 
+"change size
 nnoremap <leader>+ :vertical resize +5<cr>
 nnoremap <leader>- :vertical resize -5<cr>
