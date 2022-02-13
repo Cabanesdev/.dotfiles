@@ -169,7 +169,6 @@ hi! NonText ctermbg=NONE guibg=NONE
 let mapleader = " "
 set signcolumn=yes
 " ===============================================================KEYMAPS=======================================================================
-nmap <leader>gs :G<CR>
 
 " refresh coc
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -185,3 +184,8 @@ nnoremap <leader>k <esc>:m .-2<CR>==
 "change size
 nnoremap <leader>+ :vertical resize +5<cr>
 nnoremap <leader>- :vertical resize -5<cr>
+
+" Fugitive
+nmap <leader>gh :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
+nmap <leader>gs :G<CR>
