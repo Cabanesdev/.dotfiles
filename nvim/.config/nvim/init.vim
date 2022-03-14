@@ -76,7 +76,7 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+colorscheme moonfly 
 let g:gruvbox_termcolors=16
 
 
@@ -93,7 +93,7 @@ set encoding=UTF-8
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_theme='gruvbox'
+let g:airline_theme='moonfly'
 
 
 " ===============================================================REACT CONFIGURATIONS============================================================

@@ -77,7 +77,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions docker docker-compose)
+plugins=(git zsh-autosuggestions tmux docker docker-compose)
+
+#ZSH TMUX Config
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -109,7 +115,6 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias insomnia="$HOME/Descargas/Insomnia.Core-2021.7.2.AppImage"
 alias dcu="sudo docker-compose up"
 alias dcd="sudo docker-compose down"
 
