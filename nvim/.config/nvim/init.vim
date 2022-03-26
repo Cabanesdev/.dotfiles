@@ -7,6 +7,7 @@ call plug#begin('~/.dotfiles/nvim/.config/nvim/plugins')
 " Themes
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'ayu-theme/ayu-vim'
+Plug 'haishanh/night-owl.vim'
 Plug 'gruvbox-community/gruvbox' 
 Plug 'arcticicestudio/nord-vim'
 Plug 'relastle/bluewery.vim'
@@ -19,7 +20,7 @@ Plug 'ryanoasis/vim-devicons'
 
 " " Airline
 Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 
 " System explorer (nerdtree)
 " Plug 'preservim/nerdtree'
@@ -76,7 +77,7 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox 
+colorscheme gruvbox
 let g:gruvbox_termcolors=16
 
 
@@ -139,17 +140,17 @@ lua require'nvim-treesitter.configs'.setup { highlight = { enable = true} }
 
 " ===============================================================GENERAL CONFIGURATIONS==========================================================
 syntax enable
-syntax on
 set mouse=a
 set number
 set relativenumber
+highlight LineNr guifg=#67a3bb
 set nohlsearch
 set hidden
 set noerrorbells
-set noexpandtab
 set copyindent
 set preserveindent
-set softtabstop=0
+set expandtab
+set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 set incsearch
@@ -167,7 +168,7 @@ set clipboard=unnamedplus
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 let mapleader = " "
-set signcolumn=yes
+" set signcolumn=no
 " ===============================================================KEYMAPS=======================================================================
 
 " refresh coc

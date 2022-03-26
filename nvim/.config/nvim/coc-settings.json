@@ -1,53 +1,51 @@
 {
-	"coc.preferences.formatOnType": true,
-	"coc.preferences.formatOnSaveFiletypes": ["*"],
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
 
-	//prettier
-	"prettier.printWidth": 80,
-	"prettier.tabWidth": 2,
-	"prettier.useTabs": true,
-	"prettier.semi": true,
-	"prettier.singleQuote": true,
-	"prettier.jsxSingleQuote": true,
-	"prettier.bracketSpacing": true,
-	"prettier.arrowParens": "always",
+  //prettier
+  "prettier.tabWidth": 2,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.bracketSpacing": true,
+  "prettier.arrowParens": "always",
 
-	// Emmet
-	"emmet.showAbbreviationSuggestions": true,
-	"emmet.includeLanguages": {
-		"vue-html": "html",
-		"javascript": "javascriptreact"
-	},
+  // Emmet
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
 
-	// Coc-explorer
-	"explorer.openAction.for.directory": "expandOrCollapse",
-	"explorer.git.icon.status.added": "✚",
-	"explorer.git.icon.status.deleted": "✖",
-	"explorer.git.icon.status.renamed": "➜",
-	"explorer.git.icon.status.unmerged": "≠",
-	"explorer.git.icon.status.untracked": "?",
-	"explorer.git.icon.status.modified": "✹",
-	"explorer.git.icon.status.ignored": "☒",
-	"explorer.git.icon.status.mixed": "*",
-	"explorer.quitOnOpen": true,
-	"explorer.file.showHiddenFiles": false,
-	"explorer.file.column.clip.copy": "",
-	"explorer.icon.enableNerdfont": true,
-	"explorer.file.column.clip.cut": "",
-	"explorer.width": 25,
-	"explorer.file.hiddenRules": {
-		"patternMatches": ["^\\.git$", "^\\node_modules$", "^\\plugged$"]
-	},
-	"explorer.keyMappings.global": {
-		"a": "addFile",
-		"A": "addDirectory",
-		"r": "rename",
-		"f": "search",
-		"F": "searchRecursive",
-		"df": "delete",
-		"yy": "copyFile",
-		"dd": "cutFile",
-		"p": "pasteFile"
-	},
-	"explorer.filename.colored.enable": true
+  // Coc-explorer
+  "explorer.openAction.for.directory": "expandOrCollapse",
+  "explorer.git.icon.status.added": "✚",
+  "explorer.git.icon.status.deleted": "✖",
+  "explorer.git.icon.status.renamed": "➜",
+  "explorer.git.icon.status.unmerged": "≠",
+  "explorer.git.icon.status.untracked": "?",
+  "explorer.git.icon.status.modified": "✹",
+  "explorer.git.icon.status.ignored": "☒",
+  "explorer.git.icon.status.mixed": "*",
+  "explorer.quitOnOpen": true,
+  "explorer.file.showHiddenFiles": false,
+  "explorer.file.column.clip.copy": "",
+  "explorer.icon.enableNerdfont": true,
+  "explorer.file.column.clip.cut": "",
+  "explorer.width": 25,
+  "explorer.file.hiddenRules": {
+    "patternMatches": ["^\\.git$", "^\\node_modules$", "^\\plugged$"]
+  },
+  "explorer.keyMappings.global": {
+    "a": "addFile",
+    "A": "addDirectory",
+    "r": "rename",
+    "f": "search",
+    "F": "searchRecursive",
+    "df": "delete",
+    "yy": "copyFile",
+    "dd": "cutFile",
+    "p": "pasteFile"
+  },
+  "explorer.filename.colored.enable": true
 }
