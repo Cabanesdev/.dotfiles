@@ -168,7 +168,7 @@ set clipboard=unnamedplus
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 let mapleader = " "
-" set signcolumn=no
+set signcolumn=no
 " ===============================================================KEYMAPS=======================================================================
 
 " refresh coc
