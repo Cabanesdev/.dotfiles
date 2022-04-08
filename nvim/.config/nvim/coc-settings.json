@@ -3,12 +3,23 @@
   "coc.preferences.formatOnSaveFiletypes": ["*"],
 
   //prettier
-  "prettier.tabWidth": 2,
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": false,
+  "prettier.insertPragma": false,
+  "prettier.printWidth": 80,
+  "prettier.proseWrap": "always",
+  "prettier.quoteProps": "as-needed",
+  "prettier.requirePragma": false,
   "prettier.semi": true,
   "prettier.singleQuote": true,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all",
+  "prettier.useTabs": false,
   "prettier.jsxSingleQuote": true,
-  "prettier.bracketSpacing": true,
-  "prettier.arrowParens": "always",
+  "prettier.enable": true,
+
+  // eslintrc
+  "eslint.run": "onSave",
 
   // Emmet
   "emmet.showAbbreviationSuggestions": true,

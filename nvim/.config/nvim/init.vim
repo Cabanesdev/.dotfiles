@@ -68,6 +68,8 @@ Plug 'sbdchd/neoformat'
 " GO 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'iamcco/markdown-preview.nvim' 
+
 call plug#end()
 
 " ===============================================================================================================================================
@@ -77,7 +79,7 @@ call plug#end()
 " ===============================================================THEME===========================================================================
 
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+colorscheme moonfly
 let g:gruvbox_termcolors=16
 
 
@@ -94,7 +96,7 @@ set encoding=UTF-8
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
-let g:airline_theme='gruvbox'
+let g:airline_theme='moonfly'
 
 
 " ===============================================================REACT CONFIGURATIONS============================================================
@@ -149,15 +151,15 @@ set hidden
 set noerrorbells
 set copyindent
 set preserveindent
-set expandtab
+set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set tabstop=2
+set expandtab
 set incsearch
 set smartcase
 set noswapfile
 set nobackup
-set colorcolumn=150
+set colorcolumn=120
 set spelllang=en,es
 set ignorecase
 set termguicolors
