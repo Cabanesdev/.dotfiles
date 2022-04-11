@@ -18,19 +18,16 @@ Plug 'olimorris/onedarkpro.nvim'
 " Devicons
 Plug 'ryanoasis/vim-devicons'
 
-" " Airline
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" System explorer (nerdtree)
-" Plug 'preservim/nerdtree'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" coc for tslinting, auto complete and prettier
+" coc for prettier
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " coc extensions
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-prettier','coc-angular', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-java','coc-explorer']
+let g:coc_global_extensions = ['coc-prettier','coc-explorer']
 
 " Jsx highlight
 Plug 'yuezk/vim-js'
@@ -62,13 +59,19 @@ Plug 'AndrewRadev/tagalong.vim'
 " Line comenter
 Plug 'tpope/vim-commentary'
 
-"Prettier
-" Plug 'sbdchd/neoformat'
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 " GO 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
+
 
 " ===============================================================================================================================================
 "                                                            PLUGINS CONFIGURATIONS
@@ -134,10 +137,6 @@ nnoremap <M-l> :lua require("harpoon.ui").nav_file(4)<CR>
 
 let g:tagalong_filetypes = ['html', 'xml', 'jsx', 'eruby', 'ejs', 'eco', 'php', 'htmldjango', 'javascriptreact', 'typescriptreact']
 
-" ===============================================================TREESITTER======================================================================
-
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true} }
-
 " ===============================================================GENERAL CONFIGURATIONS==========================================================
 syntax enable
 set mouse=a
@@ -172,8 +171,7 @@ let mapleader = " "
 set signcolumn=no
 " ===============================================================KEYMAPS=======================================================================
 
-" refresh coc
-inoremap <silent><expr> <c-space> coc#refresh()
+lua require("cabanesdev.init")
 
 " move lines
 vnoremap J :m '>+1<CR>gv=gv
