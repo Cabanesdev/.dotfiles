@@ -17,6 +17,8 @@ end
 
 
 require('lspconfig').tsserver.setup(config())
+require('lspconfig').emmet_ls.setup(config({
+filetypes = { "html", "css", "typescriptreact", "javascriptreact" }}))
 require("lspconfig").cssls.setup(config())
 
 -- LSP autocomplete
