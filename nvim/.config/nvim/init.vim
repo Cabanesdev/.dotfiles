@@ -15,27 +15,13 @@ Plug 'bluz71/vim-moonfly-colors'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'olimorris/onedarkpro.nvim'
 
-" Devicons
-Plug 'ryanoasis/vim-devicons'
-
 " Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
-
-" coc for prettier
+" coc for prettier & coc extensions
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" coc extensions
 let g:coc_global_extensions = ['coc-prettier','coc-explorer']
-
-" Jsx highlight
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
-
-" by default, if you open tsx file, neovim does not show syntax colors
-" typescript-vim will do all the coloring for typescript keywords
-Plug 'leafgarland/typescript-vim'
 
 " Git integration plugin
 Plug 'tpope/vim-fugitive'
@@ -44,8 +30,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'ThePrimeagen/harpoon'
 
+" Harpoon
+Plug 'ThePrimeagen/harpoon'
 
 " Visualmulti
 Plug 'mg979/vim-visual-multi'
@@ -85,14 +72,9 @@ let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 let g:gruvbox_termcolors=16
 
-
 " ===============================================================EXPLORER========================================================================
 
  map <space>e :CocCommand explorer<CR>
-
-"	===============================================================DEVICONS========================================================================
-
-set encoding=UTF-8
 
 " ===============================================================AIRLINE=========================================================================
 
@@ -165,10 +147,8 @@ set termguicolors
 set scrolloff=8
 set copyindent
 set preserveindent
-set noshowmode
 set clipboard=unnamedplus
 hi! Normal ctermbg=NONE guibg=NONE
-" hi! NonText ctermbg=NONE guibg=NONE
 let mapleader = " "
 set signcolumn=no
 " ===============================================================KEYMAPS=======================================================================
@@ -191,3 +171,6 @@ nnoremap <leader>- :vertical resize -5<cr>
 nmap <leader>gh :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
+
+
+
