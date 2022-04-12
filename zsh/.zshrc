@@ -77,12 +77,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions docker docker-compose)
+plugins=(git zsh-autosuggestions tmux docker docker-compose)
 
-#ZSH TMUX Config
-#ZSH_TMUX_AUTOSTART=true
-#ZSH_TMUX_AUTOCONNECT=false
-#ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
+# ZSH TMUX Config
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
 
 source $ZSH/oh-my-zsh.sh
 
