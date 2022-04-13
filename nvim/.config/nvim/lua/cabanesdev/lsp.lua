@@ -1,28 +1,6 @@
-local function config(_config)
-	return vim.tbl_deep_extend("force", {
-		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-		on_attach = function()
-			Nnoremap("gd", ":lua vim.lsp.buf.definition()<CR>")
-			Nnoremap("K", ":lua vim.lsp.buf.hover()<CR>")
-			Nnoremap("gt", ":lua vim.lsp.buf.type_definition()<CR>")
-			Nnoremap("gi", ":lua vim.lsp.buf.implementation()<CR>")
-			Nnoremap("[d", ":lua vim.diagnostic.goto_next()<CR>")
-			Nnoremap("]d", ":lua vim.diagnostic.goto_prev()<CR>")
-			Nnoremap("<leader>dl", ":Telescope diagnostics<CR>")
-			Nnoremap("<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
-			Nnoremap("<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
-		end,
-	}, _config or {})
-end
-
-
-require('lspconfig').tsserver.setup(config())
-require('lspconfig').emmet_ls.setup(config({
-filetypes = { "html", "css", "typescriptreact", "javascriptreact" }}))
-require("lspconfig").cssls.setup(config())
-
 -- LSP autocomplete
-vim.opt.completeopt={"menu", "menuone", "noselect"} -- setting vim values
+vim.opt.completeopt={"menu", "menuone", "noselect"} -- setting vim values\
+vim.g.completion_matching_strategy_list={'exact', 'substring', 'fuzzy'}
 
 -- Setup nvim-cmp.
 local lspkind = require("lspkind")
@@ -30,8 +8,6 @@ local cmp = require('cmp')
 local source_map= {
 	buffer = "[Buffer]",
 	nvim_lsp = "[LSP]",
-	nvim_lua = "[Lua]",
-	cmp_tabnine = "[TN]",
 	path = "[Path]",
 }
 
@@ -71,7 +47,6 @@ cmp.setup({
 	},
 
 	sources = {
-		-- tabnine completion? yayaya
 
 		{ name = "cmp_tabnine" },
 
@@ -89,4 +64,29 @@ cmp.setup({
 		{ name = "buffer" },
 	},
 })
+
+-- config lsp
+local function config(_config)
+	return vim.tbl_deep_extend("force", {
+		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+		on_attach = function()
+			Nnoremap("gd", ":lua vim.lsp.buf.definition()<CR>")
+			Nnoremap("K", ":lua vim.lsp.buf.hover()<CR>")
+			Nnoremap("gt", ":lua vim.lsp.buf.type_definition()<CR>")
+			Nnoremap("gi", ":lua vim.lsp.buf.implementation()<CR>")
+			Nnoremap("[d", ":lua vim.diagnostic.goto_next()<CR>")
+			Nnoremap("]d", ":lua vim.diagnostic.goto_prev()<CR>")
+			Nnoremap("<leader>dl", ":Telescope diagnostics<CR>")
+			Nnoremap("<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
+			Nnoremap("<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
+		end,
+	}, _config or {})
+end
+
+
+require('lspconfig').tsserver.setup(config())
+require('lspconfig').emmet_ls.setup(config({
+filetypes = { "html", "css", "typescriptreact", "javascriptreact" }}))
+require("lspconfig").cssls.setup(config())
+
 

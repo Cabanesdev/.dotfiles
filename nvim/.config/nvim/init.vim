@@ -55,6 +55,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'onsails/lspkind-nvim'
 Plug 'nvim-lua/lsp_extensions.nvim'
+Plug 'rafamadriz/friendly-snippets'
 
 " GO 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -149,19 +150,17 @@ set copyindent
 set preserveindent
 set clipboard=unnamedplus
 hi! Normal ctermbg=NONE guibg=NONE
+" hi! Visual
 let mapleader = " "
 set signcolumn=no
 " ===============================================================KEYMAPS=======================================================================
 
-lua require("cabanesdev.init")
 
 " move lines
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-inoremap <C-j> <esc>:m .+1<CR>==
-inoremap <C-k> <esc>:m .-2<CR>==
 nnoremap <leader>j <esc>:m .+1<CR>==
 nnoremap <leader>k <esc>:m .-2<CR>==
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 "change size
 nnoremap <leader>+ :vertical resize +5<cr>
@@ -172,5 +171,4 @@ nmap <leader>gh :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
-
-
+lua require("cabanesdev.init")
