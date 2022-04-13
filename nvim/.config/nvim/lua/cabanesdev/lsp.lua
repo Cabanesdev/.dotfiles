@@ -79,6 +79,8 @@ local function config(_config)
 			Nnoremap("<leader>dl", ":Telescope diagnostics<CR>")
 			Nnoremap("<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
 			Nnoremap("<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
+			Nnoremap("<leader>vws", ":lua vim.lsp.buf.workspace_symbol()<CR>")
+			Nnoremap("<leader>vd", ":lua vim.diagnostic.open_float()<CR>")
 		end,
 	}, _config or {})
 end
