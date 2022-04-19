@@ -3,13 +3,15 @@ vim.opt.completeopt={"menu", "menuone", "noselect"} -- setting vim values\
 vim.g.completion_matching_strategy_list={'exact', 'substring', 'fuzzy'}
 
 -- Setup nvim-cmp.
-local lspkind = require("lspkind")
-local cmp = require('cmp')
-local source_map= {
+local cmp = require("cmp")
+local source_mapping = {
 	buffer = "[Buffer]",
 	nvim_lsp = "[LSP]",
+	nvim_lua = "[Lua]",
 	path = "[Path]",
 }
+
+local lspkind = require("lspkind")
 
 cmp.setup({
 	snippet = {
@@ -24,31 +26,25 @@ cmp.setup({
 			-- vim.fn["UltiSnips#Anon"](args.body)
 		end,
 	},
+
 	mapping = {
 		["<C-u>"] = cmp.mapping.scroll_docs(-4),
 		["<C-d>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true })
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 
 	formatting = {
 		format = function(entry, vim_item)
 			vim_item.kind = lspkind.presets.default[vim_item.kind]
-			local menu = source_map[entry.source.name]
-			if entry.source.name == "cmp_tabnine" then
-				if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-					menu = entry.completion_item.data.detail .. " " .. menu
-				end
-				vim_item.kind = ""
-			end
+			local menu = source_mapping[entry.source.name]
 			vim_item.menu = menu
 			return vim_item
 		end,
 	},
 
 	sources = {
-
-		{ name = "cmp_tabnine" },
+		-- { name = "cmp_tabnine" },
 
 		{ name = "nvim_lsp" },
 
@@ -61,7 +57,7 @@ cmp.setup({
 		-- For ultisnips user.
 		-- { name = 'ultisnips' },
 
-		{ name = "buffer" },
+		-- { name = "buffer" },
 	},
 })
 
@@ -76,6 +72,7 @@ local function config(_config)
 			Nnoremap("gi", ":lua vim.lsp.buf.implementation()<CR>")
 			Nnoremap("[d", ":lua vim.diagnostic.goto_next()<CR>")
 			Nnoremap("]d", ":lua vim.diagnostic.goto_prev()<CR>")
+			Nnoremap("<leader>f", ":lua vim.lsp.buf.formatting()<CR>")
 			Nnoremap("<leader>dl", ":Telescope diagnostics<CR>")
 			Nnoremap("<leader>rn", ":lua vim.lsp.buf.rename()<CR>")
 			Nnoremap("<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
@@ -87,8 +84,8 @@ end
 
 
 require('lspconfig').tsserver.setup(config())
-require('lspconfig').emmet_ls.setup(config({
-filetypes = { "html", "css", "typescriptreact", "javascriptreact" }}))
 require("lspconfig").cssls.setup(config())
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 

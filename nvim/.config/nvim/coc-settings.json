@@ -3,8 +3,8 @@
   "coc.preferences.formatOnSaveFiletypes": ["*"],
 
   //prettier
-  "prettier.arrowParens": "avoid",
-  "prettier.bracketSpacing": false,
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": true,
   "prettier.insertPragma": false,
   "prettier.printWidth": 80,
   "prettier.proseWrap": "always",
