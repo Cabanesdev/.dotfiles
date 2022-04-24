@@ -2,6 +2,8 @@
 vim.opt.completeopt={"menu", "menuone", "noselect"} -- setting vim values\
 vim.g.completion_matching_strategy_list={'exact', 'substring', 'fuzzy'}
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 -- Setup nvim-cmp.
 local cmp = require("cmp")
 local source_mapping = {
@@ -14,7 +16,7 @@ local source_mapping = {
 local lspkind = require("lspkind")
 
 cmp.setup({
-	snippet = {
+  snippet = {
 		expand = function(args)
 			-- For `vsnip` user.
 			-- vim.fn["vsnip#anonymous"](args.body)
@@ -44,6 +46,8 @@ cmp.setup({
 	},
 
 	sources = {
+		-- tabnine completion? yayaya
+
 		-- { name = "cmp_tabnine" },
 
 		{ name = "nvim_lsp" },
@@ -85,7 +89,9 @@ end
 
 require('lspconfig').tsserver.setup(config())
 require("lspconfig").cssls.setup(config())
+require("lspconfig").jsonls.setup(config())
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("cmp_luasnip")
 
 

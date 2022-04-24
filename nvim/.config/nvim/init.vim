@@ -21,7 +21,7 @@ Plug 'olimorris/onedarkpro.nvim'
 
 " coc for prettier & coc extensions
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-marketplace','coc-prettier','coc-explorer','coc-tsserver', 'coc-styled-components','coc-css', 'coc-emmet']
+let g:coc_global_extensions = ['coc-marketplace','coc-prettier','coc-explorer']
 
 " Git integration plugin
 Plug 'tpope/vim-fugitive'
@@ -57,7 +57,7 @@ Plug 'nvim-lua/lsp_extensions.nvim'
 
 " Snippets
 Plug 'L3MON4D3/LuaSnip'
-Plug 'rafamadriz/friendly-snippets'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 " GO 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

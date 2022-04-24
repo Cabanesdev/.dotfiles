@@ -1,8 +1,6 @@
 {
   "coc.preferences.formatOnType": true,
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
 
-  //prettier
   "prettier.arrowParens": "always",
   "prettier.bracketSpacing": true,
   "prettier.insertPragma": false,
@@ -18,17 +16,14 @@
   "prettier.jsxSingleQuote": true,
   "prettier.enable": true,
 
-  // eslintrc
   "eslint.run": "onSave",
 
-  // Emmet
   "emmet.showAbbreviationSuggestions": true,
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact"
   },
 
-  // Coc-explorer
   "explorer.openAction.for.directory": "expandOrCollapse",
   "explorer.git.icon.status.added": "✚",
   "explorer.git.icon.status.deleted": "✖",
