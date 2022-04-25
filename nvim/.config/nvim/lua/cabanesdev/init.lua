@@ -1,3 +1,9 @@
+function CreateNoremapGlobal(type, opts)
+	return function(lhs, rhs)
+		vim.api.nvim_set_keymap(type, lhs, rhs, opts)
+	end
+end
+
  function CreateNoremap(type, opts)
  	return function(lhs, rhs, bufnr)
  		bufnr = bufnr or 0
@@ -5,8 +11,11 @@
  	end
  end
 
- Nnoremap = CreateNoremap("n", { noremap = true })
- Inoremap = CreateNoremap("i", { noremap = true })
+
+ 
+NnoremapGlobal = CreateNoremapGlobal("n", { noremap = true })
+Nnoremap = CreateNoremap("n", { noremap = true })
+Inoremap = CreateNoremap("i", { noremap = true })
 
 require("cabanesdev.lsp")
 require("cabanesdev.treesitter")

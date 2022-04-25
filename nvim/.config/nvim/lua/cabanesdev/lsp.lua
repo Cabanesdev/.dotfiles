@@ -88,7 +88,9 @@ end
 
 
 require('lspconfig').tsserver.setup(config())
+require("lspconfig").html.setup(config())
 require("lspconfig").cssls.setup(config())
+require('lspconfig').eslint.setup(config())
 require("lspconfig").jsonls.setup(config())
 
 require("luasnip.loaders.from_vscode").lazy_load()
