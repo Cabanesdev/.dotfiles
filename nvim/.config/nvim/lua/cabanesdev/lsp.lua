@@ -33,6 +33,8 @@ cmp.setup({
 		["<C-u>"] = cmp.mapping.scroll_docs(-4),
 		["<C-d>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
+    ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item()), 
+    ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item()),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 
@@ -88,9 +90,7 @@ end
 
 
 require('lspconfig').tsserver.setup(config())
-require("lspconfig").html.setup(config())
 require("lspconfig").cssls.setup(config())
-require('lspconfig').eslint.setup(config())
 require("lspconfig").jsonls.setup(config())
 
 require("luasnip.loaders.from_vscode").lazy_load()

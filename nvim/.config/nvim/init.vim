@@ -39,7 +39,6 @@ Plug 'mg979/vim-visual-multi'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'romgrk/nvim-treesitter-context'
 
 "Auto renametag
 Plug 'AndrewRadev/tagalong.vim'
