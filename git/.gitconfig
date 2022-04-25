@@ -1,0 +1,9 @@
+[user]
+  email = cabanesdev@gmail.com
+  name = Mark Coronado Cabanes
+
+[github]
+  user = cabanesdev 
+
+[push]
+  default = current
