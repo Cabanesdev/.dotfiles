@@ -19,7 +19,7 @@ Plug 'olimorris/onedarkpro.nvim'
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 
-" coc for prettier & coc extensions
+" coc for prettier & coc extensionm
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-marketplace','coc-prettier','coc-explorer']
 
@@ -39,6 +39,7 @@ Plug 'mg979/vim-visual-multi'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'romgrk/nvim-treesitter-context'
 
 "Auto renametag
 Plug 'AndrewRadev/tagalong.vim'
@@ -146,8 +147,8 @@ set nobackup
 set colorcolumn=120
 set spelllang=en,es
 set ignorecase
-set termguicolors
 set scrolloff=8
+set termguicolors
 set copyindent
 set preserveindent
 set clipboard=unnamedplus
