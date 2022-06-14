@@ -14,6 +14,7 @@ Plug 'relastle/bluewery.vim'
 Plug 'bluz71/vim-moonfly-colors'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'olimorris/onedarkpro.nvim'
+Plug 'codingpotions/codely-vim-theme'
 
 " Airline
 " Plug 'vim-airline/vim-airline'
@@ -39,7 +40,6 @@ Plug 'mg979/vim-visual-multi'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'romgrk/nvim-treesitter-context'
 
 "Auto renametag
 Plug 'AndrewRadev/tagalong.vim'
