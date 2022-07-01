@@ -62,6 +62,9 @@ Plug 'saadparwaiz1/cmp_luasnip'
 " GO 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'rust-lang/rust.vim'
+Plug 'simrat39/rust-tools.nvim'
+
 call plug#end()
 
 
@@ -155,6 +158,9 @@ hi! Normal ctermbg=NONE guibg=NONE
 " hi! Visual
 let mapleader = " "
 set signcolumn=no
+
+autocmd FileType * let b:coc_suggest_disable = 1
+
 " ===============================================================KEYMAPS=======================================================================
 
 
