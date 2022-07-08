@@ -122,7 +122,10 @@ local opts = {
 require('lspconfig').tsserver.setup(config())
 require('lspconfig').cssls.setup(config())
 require('lspconfig').jsonls.setup(config())
-require('rust-tools').setup(opts)
+
+require("lspconfig").rust_analyzer.setup(config({	
+  cmd = { "rust-analyzer" },
+}))
 
 require("luasnip.loaders.from_vscode").lazy_load()
 require("cmp_luasnip")
