@@ -19,3 +19,5 @@ Inoremap = CreateNoremap("i", { noremap = true })
 
 require("cabanesdev.lsp")
 require("cabanesdev.treesitter")
+require("cabanesdev.workspaces")
+require("cabanesdev.telescope")

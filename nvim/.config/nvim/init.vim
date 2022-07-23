@@ -15,6 +15,7 @@ Plug 'bluz71/vim-moonfly-colors'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'olimorris/onedarkpro.nvim'
 Plug 'codingpotions/codely-vim-theme'
+Plug 'ghifarit53/tokyonight-vim'
 
 " Airline
 " Plug 'vim-airline/vim-airline'
@@ -65,6 +66,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'simrat39/rust-tools.nvim'
 
+Plug 'natecraddock/workspaces.nvim'
+
 call plug#end()
 
 
@@ -108,9 +111,10 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " ===============================================================TELESCOPE=======================================================================
 
-nnoremap ff :lua require('telescope.builtin').find_files()<CR>
-nnoremap fb :lua require('telescope.builtin').buffers()<CR>
-nnoremap fg :lua require('telescope.builtin').live_grep()<CR>
+nnoremap ff :Telescope find_files<CR>
+nnoremap fb :Telescope buffers<CR>
+nnoremap fg :Telescope live_grep<CR>
+nnoremap fw :Telescope workspaces<CR>
 command! -nargs=0 Fh :Telescope help_tags
 command! -nargs=0 FB :Telescope file_browser
 
