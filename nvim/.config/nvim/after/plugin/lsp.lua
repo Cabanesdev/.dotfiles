@@ -1,3 +1,6 @@
+local Remap = require("cabanesdev.keymap")
+local Nnoremap = Remap.nnoremap
+
 -- LSP autocomplete
 vim.opt.completeopt={"menu", "menuone", "noselect"} -- setting vim values\
 vim.g.completion_matching_strategy_list={'exact', 'substring', 'fuzzy'}
@@ -121,6 +124,7 @@ local opts = {
 
 require('lspconfig').tsserver.setup(config())
 require('lspconfig').cssls.setup(config())
+require('lspconfig').eslint.setup(config({run="onSave"}))
 require('lspconfig').jsonls.setup(config())
 
 require("lspconfig").rust_analyzer.setup(config({	
