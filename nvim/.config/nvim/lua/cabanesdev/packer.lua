@@ -10,11 +10,17 @@ return require('packer').startup(function(use)
 	use 'gruvbox-community/gruvbox' 
 	-- Git
 	use 'tpope/vim-fugitive'
-	-- File searcher
+  -- File searcher
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 	use 'nvim-lua/popup.nvim'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
-    use "nvim-telescope/telescope-file-browser.nvim"
 	-- Harpoon
 	use 'ThePrimeagen/harpoon'
 	-- Syntax highlight
