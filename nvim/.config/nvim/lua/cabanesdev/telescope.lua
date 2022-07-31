@@ -3,6 +3,7 @@ require("telescope").setup {
     extensions = {
         file_browser = {
             hijack_netrw = true,
+            initial_mode= 'normal',
             files = true,
             grouped = true,
             sorting_strategy = 'ascending',
