@@ -127,6 +127,18 @@ require('lspconfig').cssls.setup(config())
 require('lspconfig').eslint.setup(config({run="onSave"}))
 require('lspconfig').jsonls.setup(config())
 
+require("lspconfig").gopls.setup(config({
+	cmd = { "gopls", "serve" },
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
+}))
+
 require("lspconfig").rust_analyzer.setup(config({	
   cmd = { "rust-analyzer" },
 }))
