@@ -13,6 +13,12 @@ require("nvim-tree").setup({
          info = "",
          warning = "",
          error = "",
-       },
+       }
+     },
+     
+     git = {
+       enable = true,
+       ignore = false,
+       timeout = 400,
      }
 })
