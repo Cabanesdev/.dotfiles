@@ -1,5 +1,5 @@
 vim.g.cabanesdev_colorscheme = "gruvbox"
-function ColorMyPencils()
+function myColors()
     vim.g.gruvbox_contrast_dark = 'hard'
     vim.g.tokyonight_transparent_sidebar = true
     vim.g.tokyonight_transparent = true
@@ -38,4 +38,4 @@ function ColorMyPencils()
     })
 
 end
-ColorMyPencils()
+myColors()
