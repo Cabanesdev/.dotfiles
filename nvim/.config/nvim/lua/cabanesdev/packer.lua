@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
 	use 'ThePrimeagen/harpoon'
 	-- Syntax highlight
 	use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter-context'
 	-- Visualmulti
 	use 'mg979/vim-visual-multi'
 	-- Commenter
