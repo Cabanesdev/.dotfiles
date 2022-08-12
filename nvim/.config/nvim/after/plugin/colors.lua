@@ -1,4 +1,4 @@
-vim.g.cabanesdev_colorscheme = "gruvbox"
+vim.g.cabanesdev_colorscheme = "tokyonight"
 function myColors()
     vim.g.gruvbox_contrast_dark = 'hard'
     vim.g.tokyonight_transparent_sidebar = true
