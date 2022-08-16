@@ -1,5 +1,4 @@
 require("cabanesdev.set")
 require("cabanesdev.packer")
 require("cabanesdev.nvim-tree")
-require("cabanesdev.treesitter")
 require("cabanesdev.telescope")
