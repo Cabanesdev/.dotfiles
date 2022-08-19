@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
 	use 'gruvbox-community/gruvbox' 
 	-- Git
 	use 'tpope/vim-fugitive'
+  use 'APZelos/blamer.nvim'
   -- File searcher
   use {
     'kyazdani42/nvim-tree.lua',

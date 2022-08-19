@@ -39,3 +39,6 @@ vim.opt.hidden = true
 vim.opt.clipboard = "unnamedplus"
 
 vim.g.mapleader = " "
+
+-- Vim Blamer
+vim.g.blamer_enabled = 1
