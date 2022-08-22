@@ -25,7 +25,7 @@ vim.opt.hlsearch = false
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = "yes"
 
 vim.opt.cmdheight = 1
 
@@ -39,3 +39,6 @@ vim.opt.hidden = true
 vim.opt.clipboard = "unnamedplus"
 
 vim.g.mapleader = " "
+
+-- Vim Blamer
+vim.g.blamer_enabled = 1

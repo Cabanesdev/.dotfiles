@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
 	use 'gruvbox-community/gruvbox' 
 	-- Git
 	use 'tpope/vim-fugitive'
+  use 'APZelos/blamer.nvim'
   -- File searcher
   use {
     'kyazdani42/nvim-tree.lua',
@@ -25,6 +26,7 @@ return require('packer').startup(function(use)
 	use 'ThePrimeagen/harpoon'
 	-- Syntax highlight
 	use 'nvim-treesitter/nvim-treesitter'
+	use 'nvim-treesitter/playground'
   use 'nvim-treesitter/nvim-treesitter-context'
 	-- Visualmulti
 	use 'mg979/vim-visual-multi'
