@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
 	-- Git
 	use 'tpope/vim-fugitive'
   use 'APZelos/blamer.nvim'
+  use 'tpope/vim-surround'
   -- File searcher
   use {
     'kyazdani42/nvim-tree.lua',
