@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
 	-- Themes
 	use 'folke/tokyonight.nvim'
 	use 'gruvbox-community/gruvbox' 
+  use 'EdenEast/nightfox.nvim'
 	-- Git
 	use 'tpope/vim-fugitive'
   use 'APZelos/blamer.nvim'
