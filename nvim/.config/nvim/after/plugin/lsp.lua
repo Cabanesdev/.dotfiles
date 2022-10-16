@@ -126,6 +126,7 @@ require('lspconfig').tsserver.setup(config())
 require('lspconfig').cssls.setup(config())
 require('lspconfig').eslint.setup(config({run="onSave"}))
 require('lspconfig').jsonls.setup(config())
+require('lspconfig').jedi_language_server.setup(config())
 
 require("lspconfig").gopls.setup(config({
 	cmd = { "gopls", "serve" },
@@ -142,6 +143,8 @@ require("lspconfig").gopls.setup(config({
 require("lspconfig").rust_analyzer.setup(config({	
   cmd = { "rust-analyzer" },
 }))
+
+
 
 require("luasnip.loaders.from_vscode").lazy_load()
 require("cmp_luasnip")
