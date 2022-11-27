@@ -48,6 +48,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86AudioPlay exec --no-startup-id pactl suspend-sink @DEFAULT_SINK@ 1 && $refresh_i3status
 bindsym XF86AudioPause exec --no-startup-id pactl suspend-sink @DEFAULT_SINK@ 0 && $refresh_i3status
 
+#lock screen
+bindsym $mod+Escape exec i3lock
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
