@@ -5,7 +5,7 @@ export PATH=$HOME/go/bin:$PATH
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/cabanesdev/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -73,12 +73,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions docker docker-compose)
+plugins=(git zsh-autosuggestions docker docker-compose tmux)
 
 # ZSH TMUX Config
-# ZSH_TMUX_AUTOSTART=true
-# ZSH_TMUX_AUTOCONNECT=false
-# ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOCONNECT=false
+ZSH_TMUX_AUTOQUIT=$ZSH_TMUX_AUTOSTART
 
 source $ZSH/oh-my-zsh.sh
 
