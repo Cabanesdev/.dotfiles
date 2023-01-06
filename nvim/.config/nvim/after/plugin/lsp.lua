@@ -127,6 +127,7 @@ require('lspconfig').cssls.setup(config())
 require('lspconfig').eslint.setup(config({run="onSave"}))
 require('lspconfig').jsonls.setup(config())
 require('lspconfig').jedi_language_server.setup(config())
+require('lspconfig').bashls.setup(config())
 
 require("lspconfig").gopls.setup(config({
 	cmd = { "gopls", "serve" },
