@@ -1,0 +1,75 @@
+#!/bin/sh
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NORMAL='\033[0m'
+
+parameter=$1
+
+file_path=$(realpath $0)
+harpoons_path="$(dirname $file_path)/harpoons.txt"
+
+error_launcher()
+{
+  echo "${RED}${BOLD}ERROR${normal} -> $1";
+  exit 1;
+}
+
+create_file_if_not_exists()
+{
+  if [ ! -f  $harpoons_path ]
+  then
+    touch $harpoons_path
+  fi
+}
+
+get_key_from_file()
+{
+  echo $(cat $harpoons_path| grep -w "^$key|" | cut -d '|' -f1 )
+}
+
+add_mark()
+{
+  create_file_if_not_exists
+
+  key=$1
+  current_directory=$(pwd)
+
+  key_in_file=$(get_key_from_file)
+  if [ -z $key_in_file ]
+  then
+    echo "${key}|$current_directory" >> $harpoons_path
+    echo "${GREEN}${BOLD}Harpoon created successfully";
+  else
+    error_launcher "Key already exists"
+  fi
+}
+
+delete_mark() 
+{
+  echo "delete_mark"
+}
+
+list() 
+{
+  echo "list marks"
+}
+
+case $parameter in
+	-ls)
+    list
+    break
+		;;
+	-add)
+    add_mark $2
+		break
+		;;
+	-rm)
+		delete_mark
+    break
+		;;
+  -*)
+		echo "Sorry, I don't understand"
+		;;
+esac
