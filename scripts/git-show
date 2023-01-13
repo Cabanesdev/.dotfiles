@@ -1,0 +1,37 @@
+#!/bin/sh
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
+NORMAL='\033[0m'
+
+error_launcher()
+{
+  echo -e "${RED}${BOLD}ERROR -> $1";
+  exit 1;
+}
+
+commit_hash=$1
+regex=$2
+
+git status &> /dev/null
+
+if [[ "$?" != "0" ]]
+then
+  error_launcher "Not a GIT project"
+fi
+
+if [ -z $commit_hash ]
+then
+  commit_hash=$(git --no-pager log -n 1 --pretty="%h")
+fi
+
+exists_commit=$(git rev-parse --quiet --verify $commit_hash)
+
+if [ -z $exists_commit ]
+then
+  error_launcher "Commit: $commit_hash no exists"
+fi
+
+echo '--------------------------  GIT SHOW --------------------------'
+git --no-pager show --oneline --name-status $commit_hash

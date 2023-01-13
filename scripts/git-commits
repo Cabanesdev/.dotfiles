@@ -1,0 +1,25 @@
+#!/bin/sh
+
+commits_to_show=$1
+regex=$2
+
+git status &> /dev/null
+
+if [[ "$?" != "0" ]]
+then
+  echo -e "${RED}${BOLD}Not a GIT project";
+  exit 1;
+fi
+
+if [ -z $commits_to_show ];
+then
+  commits_to_show=10
+fi
+
+echo '--------------------------  GIT COMMITS --------------------------'
+if [ -z $regex ];
+then
+  git --no-pager log -$commits_to_show --pretty="%C(yellow)%h%Creset - %C(green)%an%Creset, %C(cyan)%ar%Creset : %s"
+else
+  git --no-pager log -$commits_to_show --pretty="%C(yellow)%h%Creset - %C(green)%an%Creset, %C(cyan)%ar%Creset : %s" --grep="$regex"
+fi
