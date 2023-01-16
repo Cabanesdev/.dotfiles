@@ -5,14 +5,28 @@ GREEN='\033[0;32m'
 BOLD='\033[1m'
 NORMAL='\033[0m'
 
-parameter=$1
+option=$1
+harpoon_key=$2
 
-file_path=$(realpath $0)
-harpoons_path="$(dirname $file_path)/harpoons.txt"
+harpoons_path="$HOME/.config/harpoons.txt"
+
+check_key()
+{
+  if [ -z $harpoon_key  ]
+  then
+    error_launcher "Missing harpoon_key"
+  fi
+}
 
 error_launcher()
 {
-  echo "${RED}${BOLD}ERROR${normal} -> $1";
+  echo "${RED}${BOLD}ERROR${NORMAL} -> $1";
+  exit 1;
+}
+
+success_launcher()
+{
+  echo "${GREEN}${BOLD}$1";
   exit 1;
 }
 
@@ -26,21 +40,20 @@ create_file_if_not_exists()
 
 get_key_from_file()
 {
-  echo $(cat $harpoons_path| grep -w "^$key|" | cut -d '|' -f1 )
+  echo $(cat $harpoons_path| grep -w "^$harpoon_key|" | cut -d '|' -f1 )
 }
 
 add_mark()
 {
   create_file_if_not_exists
 
-  key=$1
   current_directory=$(pwd)
-
   key_in_file=$(get_key_from_file)
+
   if [ -z $key_in_file ]
   then
-    echo "${key}|$current_directory" >> $harpoons_path
-    echo "${GREEN}${BOLD}Harpoon created successfully";
+    echo "${harpoon_key}|$current_directory" >> $harpoons_path
+    success_launcher "Harpoon created successfully";
   else
     error_launcher "Key already exists"
   fi
@@ -48,28 +61,65 @@ add_mark()
 
 delete_mark() 
 {
-  echo "delete_mark"
+  create_file_if_not_exists
+
+  key_in_file=$(get_key_from_file)
+
+  if [ -z $key_in_file ]
+  then
+    error_launcher "Key: \`${harpoon_key}\` not exists"
+  else
+    keys_except_mark=$(cat $harpoons_path| grep -v -w "^$harpoon_key|")
+    echo "${keys_except_mark}" > $harpoons_path
+  fi
 }
 
 list() 
 {
-  echo "list marks"
+  create_file_if_not_exists
+
+  echo "Keys \t\t\t Paths"
+  echo "-----------------------------------------"
+  while read line;
+  do
+    key=$(echo $line | cut -d '|' -f1)
+    path=$(echo $line | cut -d '|' -f2)
+    echo "${key} \t\t ${path}"
+  done < $harpoons_path
 }
 
-case $parameter in
-	-ls)
-    list
-    break
-		;;
+go()
+{
+  create_file_if_not_exists
+
+  key_in_file=$(get_key_from_file)
+
+  if [ -z $key_in_file ]
+  then
+    error_launcher "Key: \`${harpoon_key}\` not exists"
+  else
+    path=$(cat $harpoons_path| grep -w "^$harpoon_key|" | cut -d '|' -f2)
+    cd $path
+  fi
+}
+
+case $option in
 	-add)
-    add_mark $2
-		break
+    check_key
+    add_mark
 		;;
 	-rm)
+    check_key
 		delete_mark
+		;;
+  -ls)
+    list
+		;;
+  -go)
+    check_key
+    go
+		;;
+  *)
     break
-		;;
-  -*)
-		echo "Sorry, I don't understand"
-		;;
+    ;;
 esac
