@@ -39,7 +39,7 @@ exec --no-startup-id picom
 exec --no-startup-id feh --bg-fill ~/wallpapers/yofukashi_no_uta.jpg
 
 # Change KB layout
-exec_always --no-startup-id setxkbmap -layout us,es -option 'grp:win_space_toggle'
+exec --no-startup-id setxkbmap -layout us,es -option 'grp:win_space_toggle'
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
