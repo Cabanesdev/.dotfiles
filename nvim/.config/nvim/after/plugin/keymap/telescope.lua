@@ -1,8 +1,4 @@
-local Remap = require("cabanesdev.keymap")
-local nnoremap = Remap.nnoremap
-
-nnoremap("ff", ":Telescope find_files<CR>")
-nnoremap("fb", ":Telescope buffers<CR>")
-nnoremap("fg", ":Telescope live_grep<CR>")
-nnoremap("<leader>fb",":Telescope file_browser<CR>")
-nnoremap("<leader>fp",":Telescope project<CR>")
+local builtin = require('telescope.builtin')
+vim.keymap.set("n", "ff", builtin.find_files, {})
+vim.keymap.set("n", "fb", builtin.buffers, {})
+vim.keymap.set("n", "fg", builtin.live_grep, {})
