@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias dcu="sudo docker-compose up"
 alias dcd="sudo docker-compose down"
+alias rm-container="docker-compose rm -s -v"
 alias vimconf='vim ~/.config/nvim'
 alias vim='nvim'
 
@@ -117,6 +118,7 @@ alias vimconf='vim ~/.config/nvim'
 alias vim='~/nvim.appimage'
 alias prj='source afb-project'
 alias @commits='git-commits'
+alias mongocclaPro='mongosh "mongodb+srv://allfunds-cluster-prod.6t64c.mongodb.net/allfunds-cluster-prod" --apiVersion 1 --username allfunds-readonly;'
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

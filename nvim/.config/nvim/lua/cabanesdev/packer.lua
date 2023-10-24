@@ -14,16 +14,13 @@ return require('packer').startup(function(use)
   use 'APZelos/blamer.nvim'
   use 'tpope/vim-surround'
   -- File searcher
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
+  use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-tree/nvim-web-devicons'
 	use 'nvim-lua/popup.nvim'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-project.nvim'
+  use 'nvim-telescope/telescope-file-browser.nvim'
 	-- Harpoon
 	use 'ThePrimeagen/harpoon'
 	-- Syntax highlight
