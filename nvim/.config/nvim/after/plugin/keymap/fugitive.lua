@@ -1,5 +1,3 @@
-local nnoremap = require("cabanesdev.keymap").nnoremap
-
-nnoremap("<leader>gs", ":G<CR>")
-nnoremap("<leader>gh", ":diffget //3<CR>")
-nnoremap("<leader>gf", ":diffget //2<CR>")
+vim.keymap.set("n", "<leader>gs", ":G<CR>")
+vim.keymap.set("n", "<leader>gh", ":diffget //3<CR>")
+vim.keymap.set("n", "<leader>gf", ":diffget //2<CR>")

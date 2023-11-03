@@ -121,6 +121,7 @@ source $ZSH/oh-my-zsh.sh
 alias dcu="sudo docker-compose up"
 alias dcd="sudo docker-compose down"
 alias vimconf='vim ~/.config/nvim'
+alias nvim='~/Downloads/packages/app_images/nvim.appimage'
 alias vim='nvim'
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
